@@ -1,0 +1,16 @@
+language: node_js
+node_js: - '10'
+
+before_install:
+- npm install -g @angular/cli
+install: npm install
+
+branches:
+only: 
+- main
+
+deploy: 
+provider: heroku
+app: MyFirstCICDApp
+api_key: 
+secure: "f35f6047-0f1d-4e35-9d3b-7a15c41cb947"
